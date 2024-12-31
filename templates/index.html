@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div id="load">
+  <div>G</div>
+  <div>N</div>
+  <div>I</div>
+  <div>D</div>
+  <div>A</div>
+  <div>O</div>
+  <div>L</div>
+</div>
+    
+<div class="main-conatiner"> 
+
+    <div class="chat-container">
+
+        <div class="logo">
+            <div class="text">
+                <h1>Care Sphere</h1>
+                <h2>AI-Driven Chatbot</h2> 
+            </div>
+        </div>
+        <div class="container">
+            <div id="chat-box">
+                <p>Welcome to Care-Sphere! I am here to provide support by understanding your concerns and offering culturally informed insights. Please share your thoughts or feelings.</p>
+            </div>
+        </div>
+        <form id="chat-form">
+            <div class="feild">
+                <label for="symptoms">What's been on your mind recently?</label>
+                <input type="text" id="symptoms" placeholder="e.g., I have a depression" required>
+            </div>
+
+            <div class="feild feild-50">
+                <label for="duration">How long have you been feeling this way?</label>
+                <input type="text" id="duration" placeholder="e.g., for 2 days" required>
+            </div>
+
+            <div class="feild feild-50">
+                <label for="age">What is your age?</label>
+                <input type="number" id="age" placeholder="e.g., 25" required>
+                
+            </div>
+
+            <div class="feild">
+                <label for="sex">What is your gender?</label>
+                <select id="sex" required>
+                    <option value="">-- Select --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>     
+            </div>
+
+            <div class="feild">
+                <button type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <div id="bg-wrap"> 
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+</div>
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
